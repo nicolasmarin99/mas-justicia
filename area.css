@@ -237,6 +237,9 @@
   gap: 24px;
   align-items: flex-start;
   transition: box-shadow .3s, border-color .3s, transform .28s;
+  transform-style: preserve-3d;
+  cursor: default;
+  will-change: transform;
 }
 .cuando-card:hover {
   box-shadow: var(--shadow-card);
@@ -293,7 +296,8 @@
   gap: 20px;
   padding: 22px 0;
   border-bottom: 1px solid rgba(107,34,48,.07);
-  transition: padding-left .25s;
+  transition: padding-left .3s cubic-bezier(.2,.7,.3,1);
+  cursor: default;
 }
 .problema-item:first-child { padding-top: 0; }
 .problema-item:last-child  { border-bottom: none; }
@@ -309,6 +313,7 @@
   padding-top: 3px;
   letter-spacing: 0.04em;
 }
+.problema-texto h3,
 .problema-texto h4 {
   font-family: var(--serif);
   font-size: 20px;
@@ -390,13 +395,15 @@
   border-radius: 50%;
   background: var(--beige-card);
   display: grid; place-items: center;
-  transition: background .25s, transform .35s;
+  transition: background .25s;
+  will-change: transform;
 }
-.faq-item.open .faq-toggle { background: var(--accent); transform: rotate(45deg); }
+.faq-item.open .faq-toggle { background: var(--accent); }
 .faq-toggle svg {
   width: 14px; height: 14px;
   stroke: var(--grafito);
   transition: stroke .25s;
+  will-change: transform;
 }
 .faq-item.open .faq-toggle svg { stroke: var(--beige); }
 

@@ -110,13 +110,18 @@
     };
     card.addEventListener("mouseenter", activate);
     card.addEventListener("click", (e) => {
-      // let links inside work normally
+      // Let anchors inside handle themselves; everything else navigates to the area page
       if (e.target.closest("a")) return;
-      activate();
+      window.open(a.page, "_blank", "noopener,noreferrer");
     });
     card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); activate(); }
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        window.open(a.page, "_blank", "noopener,noreferrer");
+      }
     });
+    // Make card feel clickable
+    card.style.cursor = "pointer";
     grid.appendChild(card);
   });
 
