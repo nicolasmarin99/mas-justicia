@@ -116,6 +116,41 @@
     grid.appendChild(card);
   });
 
+  /* ---------- VALORES: infinite marquee ticker ---------- */
+  (function setupValoresTicker() {
+    const track = document.getElementById("valoresTrack");
+    if (!track || typeof gsap === "undefined") return;
+
+    const originals = [...track.querySelectorAll(".valor")];
+    if (!originals.length) return;
+
+    // Duplicate cards twice to ensure seamless loop at any viewport width
+    for (let s = 0; s < 2; s++) {
+      originals.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+      });
+    }
+
+    // One full set = 3 cards × (width + gap)
+    const GAP  = 28; // matches CSS gap
+    const setW = originals.length * (originals[0].offsetWidth + GAP);
+
+    // Continuous horizontal scroll — repeat: -1 restarts from x=0
+    // Clones look identical to originals so the jump is invisible
+    const tween = gsap.to(track, {
+      x: -setW,
+      duration: 18,
+      ease: "none",
+      repeat: -1,
+    });
+
+    // Pause on hover, resume on leave
+    track.addEventListener("mouseenter", () => tween.pause());
+    track.addEventListener("mouseleave", () => tween.resume());
+  }());
+
   /* ---------- TESTIMONIALS: slider (kept for reference, section removed) ---------- */
   const _tTrackEl = document.getElementById("tTrack");
   if (_tTrackEl) { // guard: only run if the testimonial section exists

@@ -152,17 +152,17 @@
   /* =============================================================
      VALORES — opposing-direction heading + staggered cards
      ============================================================= */
-  gsap.from(".valores-head .lead", {
+  gsap.from(".valores-copy", {
     x: -42, autoAlpha: 0, duration: 0.75, ease: "power2.out",
     scrollTrigger: { trigger: ".valores-head", start: "top 83%", once: true },
   });
-  gsap.from(".valores-head .lead-text", {
-    x: 42, autoAlpha: 0, duration: 0.75, ease: "power2.out",
+  gsap.from(".valores-video-wrap", {
+    x: 52, autoAlpha: 0, scale: 0.96, duration: 0.85, ease: "power2.out",
     scrollTrigger: { trigger: ".valores-head", start: "top 83%", once: true },
   });
-  gsap.from(".valor", {
-    y: 46, autoAlpha: 0, duration: 0.7, stagger: 0.14, ease: "power2.out",
-    scrollTrigger: { trigger: ".valores-grid", start: "top 83%", once: true },
+  gsap.from(".valores-carousel", {
+    y: 40, autoAlpha: 0, duration: 0.7, ease: "power2.out",
+    scrollTrigger: { trigger: ".valores-carousel", start: "top 83%", once: true },
   });
 
   /* =============================================================
