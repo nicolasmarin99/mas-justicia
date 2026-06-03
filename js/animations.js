@@ -13,12 +13,15 @@
   /* ── Kill CSS reveal system — GSAP owns all entrance animations */
   document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
 
-  /* ── Split hero title into individually-animated line spans ── */
+  /* ── Split hero title + wrap in clip masks for the reveal ─── */
   const heroTitle = document.querySelector(".hero-title");
   if (heroTitle) {
     const parts = heroTitle.innerHTML.split(/<br\s*\/?>/gi);
+    // Each line lives inside a mask div (overflow:hidden) so it can
+    // slide up from below on entry. The mask is released (overflow:visible)
+    // after the intro so the horizontal scroll-exit works freely.
     heroTitle.innerHTML = parts
-      .map((p, i) => `<span class="htl htl-${i + 1}">${p.trim()}</span>`)
+      .map((p, i) => `<div class="htl-mask" style="overflow:hidden;display:block;padding-bottom:0.1em;margin-bottom:-0.1em"><span class="htl htl-${i + 1}">${p.trim()}</span></div>`)
       .join("");
   }
 
@@ -76,36 +79,65 @@
   });
 
   /* =============================================================
-     PAGE LOAD INTRO — nav slides down, hero panel + copy fly in
-     clearProps: "all" removes inline styles so the scroll-exit
-     to() tweens capture the clean CSS state on first scroll.
+     PAGE LOAD INTRO — cinematic hero entrance timeline
+     Sections overlap deliberately for a fluid, orchestrated feel.
+     clearProps:"all" ensures scroll-exit captures clean CSS state.
      ============================================================= */
-  const introTL = gsap.timeline();
+  const introTL = gsap.timeline({
+    onComplete() {
+      // Release clip masks — scroll-exit moves lines horizontally,
+      // they must not be clipped by the mask overflow:hidden.
+      document.querySelectorAll(".htl-mask").forEach(m => {
+        m.style.overflow = "visible";
+      });
+    },
+  });
+
   introTL
+    /* ── Nav drops from above ─────────────────────────────────── */
     .from(".nav", {
-      y: -88, autoAlpha: 0, duration: 0.55, ease: "power2.out", clearProps: "all",
+      y: -88, autoAlpha: 0, duration: 0.5, ease: "power2.out", clearProps: "all",
     })
+
+    /* ── Hero panel scales in ─────────────────────────────────── */
     .from(".hero-panel", {
-      y: 38, autoAlpha: 0, duration: 0.8, ease: "power2.out", clearProps: "all",
-    }, "-=0.3")
+      y: 28, scale: 0.97, autoAlpha: 0,
+      duration: 0.9, ease: "power2.out", clearProps: "all",
+    }, "-=0.28")
+
+    /* ── Eyebrow: letter-spacing contracts as it appears ─────── */
     .from(".hero-copy .eyebrow", {
-      y: 14, autoAlpha: 0, duration: 0.4, ease: "power2.out", clearProps: "all",
-    }, "-=0.45")
-    .from(".htl-1, .htl-2, .htl-3", {
-      y: 28, autoAlpha: 0, duration: 0.55, stagger: 0.1, ease: "power3.out", clearProps: "all",
-    }, "-=0.3")
+      autoAlpha: 0, letterSpacing: "0.42em",
+      duration: 0.65, ease: "power2.out", clearProps: "all",
+    }, "-=0.55")
+
+    /* ── Title lines: clip-reveal from below, cascaded 0.17s ─── */
+    .from(".htl-1", { yPercent: 120, duration: 0.95, ease: "power4.out", clearProps: "all" }, "-=0.3")
+    .from(".htl-2", { yPercent: 120, duration: 0.95, ease: "power4.out", clearProps: "all" }, "-=0.78")
+    .from(".htl-3", { yPercent: 120, duration: 0.95, ease: "power4.out", clearProps: "all" }, "-=0.78")
+
+    /* ── Sub-text and CTA ─────────────────────────────────────── */
     .from(".hero-sub", {
-      y: 18, autoAlpha: 0, duration: 0.45, ease: "power2.out", clearProps: "all",
-    }, "-=0.25")
+      y: 20, autoAlpha: 0, duration: 0.55, ease: "power2.out", clearProps: "all",
+    }, "-=0.55")
     .from(".hero-actions", {
-      y: 18, autoAlpha: 0, duration: 0.45, ease: "power2.out", clearProps: "all",
-    }, "-=0.3")
-    .from(".hero-figure", {
-      scale: 0.88, autoAlpha: 0, duration: 0.85, ease: "power2.out", clearProps: "all",
-    }, "-=0.65")
+      y: 16, autoAlpha: 0, duration: 0.45, ease: "power2.out", clearProps: "all",
+    }, "-=0.38")
+
+    /* ── Radial + figure enter early, overlapping with panel ──── */
+    .from(".radial", {
+      scale: 0.6, autoAlpha: 0, rotation: -18,
+      duration: 1.2, ease: "power2.out", clearProps: "all",
+    }, 0.25)
+    .from(".hero-portrait", {
+      scale: 0.82, autoAlpha: 0,
+      duration: 1.05, ease: "power2.out", clearProps: "all",
+    }, 0.55)
+
+    /* ── Badge snaps in last ──────────────────────────────────── */
     .from(".hero-badge", {
-      x: -26, autoAlpha: 0, duration: 0.45, ease: "back.out(1.6)", clearProps: "all",
-    }, "-=0.35");
+      x: -32, autoAlpha: 0, duration: 0.5, ease: "back.out(1.8)", clearProps: "all",
+    }, "-=0.4");
 
   /* =============================================================
      STATS BAR — stagger entrance + counter animation
