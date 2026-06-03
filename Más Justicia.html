@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Más Justicia — Estudio de Abogados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="image-slot.js"></script>
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<div class="scroll-bar" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <div class="shell nav-inner">
+    <a href="#inicio" class="logo" aria-label="Más Justicia — inicio">
+      <span class="monogram" aria-hidden="true">
+        <svg viewBox="0 0 44 44">
+          <rect x="11.4" y="7" width="2.8" height="15" rx="1.4" fill="currentColor"></rect>
+          <rect x="6" y="13.1" width="13.6" height="2.8" rx="1.4" fill="currentColor"></rect>
+          <text x="22" y="33" font-family="Cormorant Garamond, serif" font-size="25" font-weight="600" fill="currentColor">J</text>
+        </svg>
+      </span>
+      <span>
+        <span class="logo-word">Más Justicia</span>
+        <span class="logo-tag" style="display:block">Cercanía • Soluciones • Confianza</span>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#areas">Áreas de Práctica</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#contacto" class="pill pill--burdeo">
+        <span class="lbl">Agenda tu consulta</span>
+        <span class="pill-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="shell">
+    <div class="hero-panel">
+      <div class="hero-copy">
+        <span class="eyebrow eyebrow--light">Estudio Jurídico</span>
+        <h1 class="hero-title">Más cercanía.<br />Más soluciones.<br />Más <span class="accent">justicia.</span></h1>
+        <p class="hero-sub">Asesoría legal con trato humano y resultados reales. Estamos de tu lado en cada paso del proceso.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="pill pill--beige">
+            Agenda tu consulta
+            <span class="pill-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-figure">
+        <div class="radial" id="radial" aria-hidden="true"></div>
+        <div class="hero-portrait">
+          <image-slot id="hero-portrait" shape="circle" fit="cover" src="assets/balanza.png" placeholder="Retrato profesional o balanza"></image-slot>
+        </div>
+        <div class="hero-badge">
+          <span class="bnum">+12</span>
+          <span class="blbl">años de experiencia<br />jurídica del equipo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATS ============================ -->
+<section class="stats" aria-label="Métricas del estudio">
+  <div class="shell">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-num stat-text">Disponibilidad</span>
+        <span class="stat-lbl">Asegurada</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">Experiencia</span>
+        <span class="stat-lbl">en las areas</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-lbl">Confidencial</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-num">24h</span>
+        <span class="stat-lbl">Respuesta garantizada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== ÁREAS DE PRÁCTICA ====================== -->
+<section class="areas" id="areas">
+  <div class="shell">
+    <div class="areas-panel">
+      <div class="areas-head reveal">
+        <span class="eyebrow eyebrow--light">Qué hacemos</span>
+        <h2 class="section-title">Áreas de práctica</h2>
+        <p>Cobertura legal integral. Selecciona un área para conocer cómo podemos ayudarte.</p>
+      </div>
+
+      <div class="areas-grid" id="areasGrid">
+        <!-- cards injected by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== NOSOTROS / VALORES ====================== -->
+<section class="valores" id="nosotros">
+  <div class="shell">
+    <div class="valores-head reveal">
+      <div class="lead">
+        <span class="eyebrow">Nuestra esencia</span>
+        <h2 class="section-title" style="margin-top:16px">Defendemos <em>personas</em>, no solo casos.</h2>
+      </div>
+      <p class="lead-text">Creemos en una abogacía distinta: cercana, transparente y equilibrada. Cada cliente recibe la atención y el compromiso que merece.</p>
+    </div>
+
+    <div class="valores-grid">
+      <article class="valor reveal">
+        <span class="valor-deco" aria-hidden="true">01</span>
+        <div class="valor-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <span class="valor-index">01</span>
+        <h3>Cercanía</h3>
+        <p>Hablamos claro, sin tecnicismos. Te escuchamos y acompañamos con empatía en cada etapa de tu caso.</p>
+      </article>
+
+      <article class="valor reveal">
+        <span class="valor-deco" aria-hidden="true">02</span>
+        <div class="valor-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M5 8l7-5 7 5"></path><circle cx="12" cy="15" r="3"></circle></svg>
+        </div>
+        <span class="valor-index">02</span>
+        <h3>Diferenciación</h3>
+        <p>Estrategias hechas a tu medida. No aplicamos fórmulas: estudiamos cada caso para encontrar la mejor salida.</p>
+      </article>
+
+      <article class="valor reveal">
+        <span class="valor-deco" aria-hidden="true">03</span>
+        <div class="valor-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v17"></path><path d="M7 20h10"></path><path d="M3 7h18"></path><path d="M6 7l-3 6h6z"></path><path d="M18 7l-3 6h6z"></path></svg>
+        </div>
+        <span class="valor-index">03</span>
+        <h3>Equilibrio</h3>
+        <p>Buscamos acuerdos justos y soluciones sostenibles, equilibrando firmeza jurídica con sensatez humana.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== PROCESO ====================== -->
+<section class="proceso">
+  <div class="shell">
+    <div class="proceso-head reveal">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 class="section-title" style="margin-top:14px">Tu caso, paso a paso.</h2>
+      <p class="proceso-sub">Un proceso claro y transparente desde el primer contacto hasta la resolución final.</p>
+    </div>
+    <div class="proceso-steps">
+      <article class="paso reveal">
+        <div class="paso-num" aria-hidden="true">01</div>
+        <div class="paso-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <h3>Consulta inicial</h3>
+        <p>Cuéntanos tu situación. Analizamos tu caso y te orientamos con claridad desde el primer contacto.</p>
+      </article>
+      <div class="paso-conector" aria-hidden="true">
+        <svg viewBox="0 0 60 24" fill="none"><path d="M0 12 Q30 4 60 12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/></svg>
+      </div>
+      <article class="paso reveal">
+        <div class="paso-num" aria-hidden="true">02</div>
+        <div class="paso-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Estrategia a medida</h3>
+        <p>Diseñamos una estrategia jurídica personalizada para tu caso, con plazos claros y opciones concretas.</p>
+      </article>
+      <div class="paso-conector" aria-hidden="true">
+        <svg viewBox="0 0 60 24" fill="none"><path d="M0 12 Q30 4 60 12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/></svg>
+      </div>
+      <article class="paso reveal">
+        <div class="paso-num" aria-hidden="true">03</div>
+        <div class="paso-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Resolución y cierre</h3>
+        <p>Te acompañamos hasta el resultado final. Negociamos, litigamos y te informamos en cada etapa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== COLABORADORES ====================== -->
+<section class="equipo" id="equipo">
+  <div class="shell">
+    <div class="equipo-head reveal">
+      <span class="eyebrow">Nuestro equipo</span>
+      <h2 class="section-title">Colaboradores</h2>
+      <p>Profesionales con vocación y experiencia, comprometidos con un trato cercano y resultados reales.</p>
+    </div>
+
+    <!-- Colaborador 1 — foto izquierda, info derecha -->
+    <article class="colab reveal">
+      <div class="colab-photo">
+        <image-slot id="colab-1" shape="rounded" radius="28" fit="cover" placeholder="Foto del colaborador 1"></image-slot>
+      </div>
+      <div class="colab-info">
+        <span class="eyebrow colab-role">Abogado · Socio fundador</span>
+        <h3 class="colab-name">Mauricio Arellano Valdebenito</h3>
+        <p class="colab-pres">Apasionado por la defensa de las personas, lidera el área laboral y civil del estudio. Su enfoque combina rigor jurídico con un acompañamiento humano y cercano en cada etapa del proceso.</p>
+        <dl class="colab-cv">
+          <div class="row"><dt>Estudios</dt><dd>Abogado, Universidad Finis Terrae. Licenciado en Ciencias Jurídicas y Sociales.</dd></div>
+          <div class="row"><dt>Experiencia</dt><dd>Más de 12 años en litigación laboral y de familia, en estudios privados y asesoría a organizaciones sindicales.</dd></div>
+          <div class="row"><dt>Magíster</dt><dd>Magíster en Derecho del Trabajo y de la Seguridad Social, Pontificia Universidad Católica de Chile.</dd></div>
+          <div class="row"><dt>Diplomados</dt><dd>Diplomado en Negociación Colectiva · Diplomado en Mediación Familiar.</dd></div>
+          <div class="row"><dt>Especialidades</dt><dd>
+            <div class="colab-tags">
+              <span class="colab-tag">Derecho Laboral y coorporativo</span>
+              <span class="colab-tag">Derecho civil</span>
+            </div>
+          </dd></div>
+        </dl>
+      </div>
+    </article>
+
+
+<!-- ====================== UBICACIÓN ====================== -->
+<section class="ubicacion" id="ubicacion">
+  <div class="shell">
+    <div class="ubicacion-head">
+      <span class="eyebrow">Visítanos</span>
+      <h2 class="section-title" style="margin-top:14px">Dónde nos<br />encontramos</h2>
+      <p class="ubicacion-sub">Estamos en el centro de Santiago, listos para recibirte y acompañarte desde el primer contacto.</p>
+    </div>
+
+    <div class="ubicacion-grid">
+      <!-- Info panel -->
+      <div class="ubicacion-info">
+        <div class="uinfo-item">
+          <div class="uinfo-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div>
+            <span class="uinfo-label">Dirección</span>
+            <span class="uinfo-val">Huérfanos 1044, Oficina 64<br />Santiago, Chile</span>
+          </div>
+        </div>
+
+        <div class="uinfo-item">
+          <div class="uinfo-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div>
+            <span class="uinfo-label">Teléfono</span>
+            <a href="tel:+56900000000" class="uinfo-val uinfo-link">+56 9 0000 0000</a>
+          </div>
+        </div>
+
+        <div class="uinfo-item">
+          <div class="uinfo-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div>
+            <span class="uinfo-label">Correo</span>
+            <a href="mailto:contacto@masjusticia.cl" class="uinfo-val uinfo-link">contacto@masjusticia.cl</a>
+          </div>
+        </div>
+
+        <div class="uinfo-item">
+          <div class="uinfo-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <span class="uinfo-label">Horario de atención</span>
+            <span class="uinfo-val">Lunes a Viernes<br />9:00 – 18:30 hrs.</span>
+          </div>
+        </div>
+
+        <a href="#contacto" class="pill pill--burdeo ubicacion-cta">
+          Agenda tu visita
+          <span class="pill-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Map -->
+      <div class="ubicacion-map">
+        <iframe
+          title="Ubicación Más Justicia — Huérfanos 1044, Santiago"
+          src="https://maps.google.com/maps?q=Huerfanos+1044+Santiago+Chile&output=embed&z=17&hl=es"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== CTA FINAL + FORM ====================== -->
+<section class="final" id="contacto">
+  <div class="shell">
+    <div class="final-panel reveal">
+      <div class="final-copy">
+        <span class="eyebrow eyebrow--light">Estamos para ayudarte</span>
+        <h2>¿Necesitas asesoría legal?</h2>
+        <p>Cuéntanos tu situación y un abogado te contactará para orientarte. La primera consulta es sin costo y totalmente confidencial.</p>
+        <div class="final-actions">
+          <a href="tel:+59800000000" class="pill pill--solid-beige">
+            Llámanos ahora
+            <span class="pill-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="consult-card">
+        <form id="consultForm" novalidate>
+          <h3>Agenda tu consulta</h3>
+          <p class="sub">Respuesta dentro de 24 horas hábiles.</p>
+
+          <div class="field" id="f-nombre">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" />
+            <span class="err">Por favor ingresa tu nombre.</span>
+          </div>
+
+          <div class="field" id="f-email">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" />
+            <span class="err">Ingresa un correo válido.</span>
+          </div>
+
+          <div class="field" id="f-area">
+            <label for="area">Área de consulta</label>
+            <select id="area" name="area">
+              <option value="">Selecciona un área</option>
+              <option>Derecho Laboral</option>
+              <option>Derecho de Familia</option>
+              <option>Derecho Civil</option>
+              <option>Defensoría Deudores</option>
+              <option>Otra</option>
+            </select>
+            <span class="err">Selecciona un área.</span>
+          </div>
+
+          <div class="field" id="f-msg">
+            <label for="msg">Cuéntanos brevemente</label>
+            <textarea id="msg" name="msg" rows="3" placeholder="Describe tu situación..."></textarea>
+            <span class="err">Escribe un breve mensaje.</span>
+          </div>
+
+          <button type="submit" class="pill pill--burdeo submit">
+            Enviar solicitud
+            <span class="pill-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </span>
+          </button>
+        </form>
+
+        <div class="consult-success" id="consultSuccess">
+          <div class="check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+          </div>
+          <h3>¡Solicitud enviada!</h3>
+          <p>Gracias por escribirnos. Un abogado de Más Justicia te contactará muy pronto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">
+          <span class="monogram" aria-hidden="true">
+            <svg viewBox="0 0 44 44">
+              <rect x="11.4" y="7" width="2.8" height="15" rx="1.4" fill="currentColor"></rect>
+              <rect x="6" y="13.1" width="13.6" height="2.8" rx="1.4" fill="currentColor"></rect>
+              <text x="22" y="33" font-family="Cormorant Garamond, serif" font-size="25" font-weight="600" fill="currentColor">J</text>
+            </svg>
+          </span>
+          <span class="logo-word">Más Justicia</span>
+        </a>
+        <p>Asesoría legal con cercanía, soluciones y confianza. Defendemos personas, no solo casos.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li><a href="#areas">Derecho Laboral</a></li>
+          <li><a href="#areas">Derecho de Familia</a></li>
+          <li><a href="#areas">Derecho Civil</a></li>
+          <li><a href="#areas">Defensoría Deudores</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Estudio</h4>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#equipo">Colaboradores</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#contacto">Agenda tu consulta</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:hola@masjusticia.uy">hola@masjusticia.uy</a></li>
+          <li><a href="tel:+59800000000">+598 0000 0000</a></li>
+          <li><a href="https://maps.google.com/?q=Hu%C3%A9rfanos+1044+oficina+64+Santiago" target="_blank" rel="noopener">Huérfanos 1044, of. 64<br />Santiago, Chile</a></li>
+          <li><a href="https://masjusticia.uy">masjusticia.uy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="copy">© 2026 Más Justicia. Todos los derechos reservados.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"></path></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.38 8.38 0 0 1-4-1L3 20l1-5.5a8.38 8.38 0 0 1-1-4A8.38 8.38 0 0 1 11.5 2 8.38 8.38 0 0 1 21 11.5z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script src="node_modules/gsap/dist/ScrollTrigger.min.js"></script>
+<script src="masjusticia.js"></script>
+<script src="animations.js"></script>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/56900000000" class="wsp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+</body>
+</html>

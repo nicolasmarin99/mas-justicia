@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Claude Code internals
+.agents/
+.claude/
+.thumbnail
+skills-lock.json
+uploads/
