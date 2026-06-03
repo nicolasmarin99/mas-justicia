@@ -47,6 +47,7 @@
       name: "Derecho Laboral",
       img: "assets/laboral.png",
       badge: "Más demandado",
+      page: "laboral.html",
       desc: "Despidos injustificados, finiquitos, acoso laboral y negociación colectiva. Defendemos tus derechos como trabajador.",
     },
     {
@@ -54,6 +55,7 @@
       name: "Derecho de Familia",
       img: "assets/familia.png",
       badge: "Trato humano",
+      page: "familia.html",
       desc: "Divorcios, pensiones de alimentos, cuidado personal y régimen de visitas, siempre con empatía y discreción.",
     },
     {
@@ -61,6 +63,7 @@
       name: "Derecho Civil",
       img: "assets/balanza.png",
       badge: "Patrimonio protegido",
+      page: "civil.html",
       desc: "Contratos, arrendamientos, cobranzas e indemnizaciones. Resguardamos tu patrimonio y tus acuerdos.",
     },
     {
@@ -68,6 +71,7 @@
       name: "Defensoría Deudores",
       img: "assets/deudores.png",
       badge: "Asesoría integral",
+      page: "deudores.html",
       desc: "Renegociación de deudas, defensa frente a cobranzas abusivas y procedimientos de insolvencia. Recupera tu tranquilidad financiera.",
     },
   ];
@@ -90,7 +94,7 @@
         <div class="area-name">${a.name}</div>
         <div class="area-detail">
           <p>${a.desc}</p>
-          <a href="#contacto" class="area-link">Consultar este caso
+          <a href="${a.page}" target="_blank" rel="noopener" class="area-link">Ver más sobre esta área
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
         </div>
