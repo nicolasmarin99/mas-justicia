@@ -1155,6 +1155,92 @@ h3 { font-weight: 600; }
 }
 
 /* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+.theme-toggle {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(107,34,48,.2);
+  background: transparent;
+  color: var(--burdeo);
+  cursor: pointer;
+  display: grid; place-items: center;
+  flex: 0 0 auto;
+  position: relative;
+  transition: background .2s, border-color .2s;
+}
+.theme-toggle:hover { background: rgba(107,34,48,.08); }
+.theme-toggle svg {
+  width: 18px; height: 18px;
+  position: absolute;
+  transition: opacity .25s, transform .3s cubic-bezier(.2,.7,.3,1);
+}
+/* Light mode: show moon, hide sun */
+.icon-sun  { opacity: 0; transform: rotate(-90deg) scale(0.7); }
+.icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+/* Dark mode: show sun, hide moon */
+[data-theme="dark"] .icon-sun  { opacity: 1; transform: rotate(0) scale(1); }
+[data-theme="dark"] .icon-moon { opacity: 0; transform: rotate(90deg) scale(0.7); }
+[data-theme="dark"] .theme-toggle {
+  color: var(--grafito);
+  border-color: rgba(239,231,219,.2);
+}
+[data-theme="dark"] .theme-toggle:hover { background: rgba(239,231,219,.1); }
+
+/* ============================================================
+   DARK MODE TOKENS
+   ============================================================ */
+[data-theme="dark"] {
+  --beige:        #1A1714;
+  --beige-warm:   #201D19;
+  --beige-card:   #252220;
+  --grafito:      #EDE5D8;
+  --grafito-soft: #B0A79D;
+  --piedra:       #7A7168;
+
+  --shadow-soft:  0 14px 34px -18px rgba(0,0,0,.55);
+  --shadow-card:  0 22px 48px -24px rgba(0,0,0,.65), 0 6px 16px -10px rgba(0,0,0,.45);
+  --shadow-panel: 0 50px 90px -34px rgba(0,0,0,.65), 0 16px 36px -22px rgba(0,0,0,.50);
+}
+
+/* Nav */
+[data-theme="dark"] .nav { background: rgba(24,20,17,.94); }
+[data-theme="dark"] .nav.scrolled { border-bottom-color: rgba(239,231,219,.08); }
+[data-theme="dark"] .nav-links a  { color: var(--grafito); }
+[data-theme="dark"] .nav .logo    { color: var(--burdeo); }
+[data-theme="dark"] .nav-links.open { background: var(--beige-warm); }
+
+/* Valor cards */
+[data-theme="dark"] .valor {
+  background: linear-gradient(165deg, #2E2924 0%, var(--beige-card) 100%);
+  border-color: rgba(107,34,48,.14);
+}
+
+/* Proceso section */
+[data-theme="dark"] .proceso {
+  background: linear-gradient(180deg, var(--beige) 0%, var(--beige-warm) 55%, var(--beige) 100%);
+}
+
+/* Colaborador CV */
+[data-theme="dark"] .colab-cv .row { border-color: rgba(239,231,219,.07); }
+
+/* Contact form card */
+[data-theme="dark"] .consult-card  { background: var(--beige-card); color: var(--grafito); }
+[data-theme="dark"] .field label   { color: var(--grafito-soft); }
+[data-theme="dark"] .field input,
+[data-theme="dark"] .field select,
+[data-theme="dark"] .field textarea {
+  background: var(--beige-warm);
+  color: var(--grafito);
+  border-color: rgba(239,231,219,.14);
+}
+[data-theme="dark"] .field input::placeholder,
+[data-theme="dark"] .field textarea::placeholder { color: var(--piedra); }
+
+/* Footer (already dark, keep consistent) */
+[data-theme="dark"] .footer { background: #110F0D; }
+
+/* ============================================================
    Reveal on scroll
    ============================================================ */
 .reveal { opacity: 1; transform: translateY(22px); transition: transform .7s cubic-bezier(.2,.7,.3,1); will-change: transform; }

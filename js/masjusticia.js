@@ -4,6 +4,16 @@
 (function () {
   "use strict";
 
+  /* ---------- DARK MODE TOGGLE ---------- */
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+  }
+
   /* ---------- NAV: scrolled state + mobile toggle ---------- */
   const nav = document.getElementById("nav");
   const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 12);

@@ -447,6 +447,41 @@
 .area-cta-actions          { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 
 /* ============================================================
+   DARK MODE OVERRIDES (area pages)
+   ============================================================ */
+[data-theme="dark"] .cuando-card {
+  background: var(--beige-card);
+  border-color: rgba(239,231,219,.08);
+}
+[data-theme="dark"] .cuando-card:hover { border-color: rgba(239,231,219,.16); }
+
+[data-theme="dark"] .area-service-list li {
+  background: var(--beige-warm);
+  border-color: rgba(239,231,219,.06);
+}
+[data-theme="dark"] .area-service-list li:hover { border-color: rgba(239,231,219,.14); }
+
+[data-theme="dark"] .faq-item {
+  background: var(--beige-card);
+  border-color: rgba(239,231,219,.08);
+}
+[data-theme="dark"] .faq-item.open { border-color: rgba(239,231,219,.2); }
+[data-theme="dark"] .faq-q         { color: var(--grafito); }
+[data-theme="dark"] .faq-item.open .faq-q { color: var(--accent); }
+[data-theme="dark"] .faq-toggle    { background: var(--beige-warm); }
+[data-theme="dark"] .faq-item.open .faq-toggle { background: var(--accent); }
+[data-theme="dark"] .faq-toggle svg { stroke: var(--grafito); }
+
+[data-theme="dark"] .problema-item { border-color: rgba(239,231,219,.07); }
+
+[data-theme="dark"] .area-faq {
+  background: linear-gradient(180deg, var(--beige) 0%, var(--beige-warm) 55%, var(--beige) 100%);
+}
+[data-theme="dark"] .area-cuando {
+  background: linear-gradient(180deg, var(--beige) 0%, var(--beige-warm) 55%, var(--beige) 100%);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1080px) {
