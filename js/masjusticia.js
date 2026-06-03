@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    MÁS JUSTICIA — interactions
    ============================================================ */
 (function () {
@@ -47,7 +47,7 @@
       name: "Derecho Laboral",
       img: "assets/laboral.png",
       badge: "Más demandado",
-      page: "laboral.html",
+      page: "areas/laboral.html",
       desc: "Despidos injustificados, finiquitos, acoso laboral y negociación colectiva. Defendemos tus derechos como trabajador.",
     },
     {
@@ -55,7 +55,7 @@
       name: "Derecho de Familia",
       img: "assets/familia.png",
       badge: "Trato humano",
-      page: "familia.html",
+      page: "areas/familia.html",
       desc: "Divorcios, pensiones de alimentos, cuidado personal y régimen de visitas, siempre con empatía y discreción.",
     },
     {
@@ -63,7 +63,7 @@
       name: "Derecho Civil",
       img: "assets/balanza.png",
       badge: "Patrimonio protegido",
-      page: "civil.html",
+      page: "areas/civil.html",
       desc: "Contratos, arrendamientos, cobranzas e indemnizaciones. Resguardamos tu patrimonio y tus acuerdos.",
     },
     {
@@ -71,7 +71,7 @@
       name: "Defensoría Deudores",
       img: "assets/deudores.png",
       badge: "Asesoría integral",
-      page: "deudores.html",
+      page: "areas/deudores.html",
       desc: "Renegociación de deudas, defensa frente a cobranzas abusivas y procedimientos de insolvencia. Recupera tu tranquilidad financiera.",
     },
   ];
