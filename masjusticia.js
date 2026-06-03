@@ -94,7 +94,7 @@
         <div class="area-name">${a.name}</div>
         <div class="area-detail">
           <p>${a.desc}</p>
-          <a href="${a.page}" target="_blank" rel="noopener" class="area-link">Ver más sobre esta área
+          <a href="${a.page}" class="area-link">Ver más sobre esta área
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
           </a>
         </div>
@@ -110,14 +110,14 @@
     };
     card.addEventListener("mouseenter", activate);
     card.addEventListener("click", (e) => {
-      // Let anchors inside handle themselves; everything else navigates to the area page
+      // Let anchors inside handle themselves; everything else navigates in-tab
       if (e.target.closest("a")) return;
-      window.open(a.page, "_blank", "noopener,noreferrer");
+      window.location.href = a.page;
     });
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        window.open(a.page, "_blank", "noopener,noreferrer");
+        window.location.href = a.page;
       }
     });
     // Make card feel clickable
