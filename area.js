@@ -66,9 +66,11 @@
   });
 
   /* ── Hero panel subtle scale-out on scroll ───────────────── */
+  /* autoAlpha removed: the scroll tween captures the entrance's
+     from-state (opacity:0) which would restore invisible on scroll-up.
+     Scale-only is safe because it doesn't conflict with opacity. */
   gsap.to(".area-hero-panel", {
     scale: 0.97,
-    autoAlpha: 0.88,
     ease: "none",
     scrollTrigger: {
       trigger: ".area-hero",
